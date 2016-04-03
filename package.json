@@ -1,0 +1,18 @@
+{
+  "name": "react-mocha-jsdom-unit-testing",
+  "version": "1.0.0",
+  "description": "A react mocha jsdom unit testing guide",
+  "scripts": {
+    "test": "node_modules/.bin/_mocha --compilers js:babel-core/register test-setup.js 'src/**/*.spec.js'",
+    "test-cover": "node_modules/.bin/babel-node node_modules/isparta/bin/isparta cover --excludes '**/*.spec.js' --include '**/*.js' --report lcov --report html node_modules/mocha/bin/_mocha -- test-setup.js 'src/**/*.spec.js'"
+  },
+  "author": "Yang Li",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "isparta": "^4.0.0",
+    "jsdom": "^8.2.0",
+    "mocha": "^2.4.5",
+    "sinon-chai": "^2.8.0"
+  }
+}
