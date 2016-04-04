@@ -2,19 +2,12 @@ import chai, { expect } from 'chai';
 import sinonChai from 'sinon-chai';
 import sinon from 'sinon';
 import { jsdom } from 'jsdom';
-import chaiAsPromised from 'chai-as-promised';
-import env from '../src/config/env';
-
-global.configuration = {
-  default: env
-};
 
 global.chai = chai;
 global.expect = expect;
 global.sinon = sinon;
 
 chai.use(sinonChai);
-chai.use(chaiAsPromised);
 
 // setup the simplest document possible
 const doc = jsdom('<!doctype html><html><body></body></html>');
